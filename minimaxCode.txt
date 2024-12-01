@@ -1,0 +1,22 @@
+scores = [10, 4, 7, 9]
+counter = 1 # odd --> min // even --> max
+
+while (len(scores) > 1):
+    temp_scores = []
+    
+
+    if counter % 2 == 1:
+        for i in range(0, len(scores), 2):
+            temp_scores.append(min([scores[i], scores[i + 1]]))
+
+    else: 
+        for i in range(0, len(scores), 2):
+            temp_scores.append(max([scores[i], scores[i + 1]]))
+    
+    counter += 1
+
+    scores = temp_scores
+
+print(scores[0])
+
+
